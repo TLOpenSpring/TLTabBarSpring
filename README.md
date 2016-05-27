@@ -1,4 +1,5 @@
 # TLTabBarSpring
+<<<<<<< HEAD
 
 [![CI Status](http://img.shields.io/travis/Andrew/TLTabBarSpring.svg?style=flat)](https://travis-ci.org/Andrew/TLTabBarSpring)
 [![Version](https://img.shields.io/cocoapods/v/TLTabBarSpring.svg?style=flat)](http://cocoapods.org/pods/TLTabBarSpring)
@@ -27,3 +28,6 @@ Andrew, anluanlu123@163.com
 ## License
 
 TLTabBarSpring is available under the MIT license. See the LICENSE file for more info.
+=======
+自定义的TabBar,支持动画
+>>>>>>> 337342515af64b824ffb3a6299d66c08461a2e81

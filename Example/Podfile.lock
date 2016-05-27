@@ -1,0 +1,14 @@
+PODS:
+  - TLTabBarSpring (0.1.0)
+
+DEPENDENCIES:
+  - TLTabBarSpring (from `../`)
+
+EXTERNAL SOURCES:
+  TLTabBarSpring:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TLTabBarSpring: 6c3cf7cee3d1fdf5abb9d7ccebc60dd1c0280435
+
+COCOAPODS: 0.39.0

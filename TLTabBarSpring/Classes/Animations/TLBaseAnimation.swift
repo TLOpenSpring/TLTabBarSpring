@@ -8,6 +8,9 @@
 
 import UIKit
 
+public let TLScreen_width = UIScreen.mainScreen().bounds.width
+public let TLScreen_height = UIScreen.mainScreen().bounds.height
+
 protocol TLAnimationProtocol {
     func startAnimation(icon:UIImageView,textLb:UILabel) -> Void;
     /**

@@ -17,6 +17,9 @@ public class TLTabBarSpringItem: UITabBarItem {
      public var textColor: UIColor = UIColor.blackColor()
      public var iconColor: UIColor = UIColor.clearColor() // if alpha color is 0 color ignoring
     
+    public var DefaultBackgroundColor:UIColor = UIColor.brownColor()
+    public var selectBackgroundColor:UIColor = UIColor.yellowColor()
+
     public func playAnimation(){
     assert(animation != nil,"必须在UitabBarItem中添加一个animation")
         guard animation != nil && iconView != nil else {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23B37658F97730E89391CE8D /* Pods_TLTabBarSpring_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB3F92DF158F55D19EE0ED9 /* Pods_TLTabBarSpring_Example.framework */; };
+		49740CD41CF96D5E00D1B7BE /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CD31CF96D5E00D1B7BE /* FirstController.swift */; };
+		49740CD61CF96D6C00D1B7BE /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CD51CF96D6C00D1B7BE /* SecondController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		0B74D2CF7AC58ADA06F03045 /* TLTabBarSpring.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TLTabBarSpring.podspec; path = ../TLTabBarSpring.podspec; sourceTree = "<group>"; };
+		49740CD31CF96D5E00D1B7BE /* FirstController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
+		49740CD51CF96D6C00D1B7BE /* SecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TLTabBarSpring_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLTabBarSpring_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				49740CD31CF96D5E00D1B7BE /* FirstController.swift */,
+				49740CD51CF96D6C00D1B7BE /* SecondController.swift */,
 			);
 			name = "Example for TLTabBarSpring";
 			path = TLTabBarSpring;
@@ -303,6 +309,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49740CD41CF96D5E00D1B7BE /* FirstController.swift in Sources */,
+				49740CD61CF96D6C00D1B7BE /* SecondController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

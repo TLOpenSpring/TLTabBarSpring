@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rgd-iT-yTA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Item 2-->
+        <scene sceneID="wVV-rm-iCU">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WU2-ga-8Wd" customClass="SecondController" customModule="TLTabBarSpring_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="nCa-5p-4DL"/>
+                        <viewControllerLayoutGuide type="bottom" id="LNY-2a-PFk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="jCn-az-b1j">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="Settings" id="YIt-5a-OYr" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tln-rj-Ugy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="555" y="592"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="bv1-TJ-cXZ">
+            <objects>
+                <viewController id="beX-By-dWi" customClass="FirstController" customModule="TLTabBarSpring_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NbD-NC-O3B"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vbf-D6-4Z5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DhL-Ty-wZe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="icon_pin" id="qAD-KA-xeJ" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="You-25-8Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="-69"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VXg-sd-Wir">
+            <objects>
+                <tabBarController id="Rgd-iT-yTA" customClass="ViewController" customModule="TLTabBarSpring" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="UqU-uU-t3X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="beX-By-dWi" kind="relationship" relationship="viewControllers" id="tTH-e6-d83"/>
+                        <segue destination="WU2-ga-8Wd" kind="relationship" relationship="viewControllers" id="U4q-RX-YAF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAO-9r-DIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="262"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Settings" width="30" height="30"/>
+        <image name="icon_pin" width="30" height="30"/>
+    </resources>
 </document>

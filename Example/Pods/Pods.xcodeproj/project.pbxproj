@@ -10,14 +10,19 @@
 		01DD83DECCD9CC7C8BEB6E6942DA508B /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C0FA51528FBF47275A3786C63F74B8 /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-dummy.m */; };
 		0F902F0F6E743C109710C0DF9DF28873 /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E9029CA583940DA5D2F308268DA7D4 /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		368122C14264DC8FA655933E3349968E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		49740CC41CF8936900D1B7BE /* TLBaseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CC31CF8936900D1B7BE /* TLBaseAnimation.swift */; };
-		49740CC51CF8936900D1B7BE /* TLBaseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CC31CF8936900D1B7BE /* TLBaseAnimation.swift */; };
-		49740CC61CF8936900D1B7BE /* TLBaseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CC31CF8936900D1B7BE /* TLBaseAnimation.swift */; };
+		49740CCC1CF917B900D1B7BE /* TLTabBarSpringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CCB1CF917B900D1B7BE /* TLTabBarSpringController.swift */; };
+		49740CCD1CF917B900D1B7BE /* TLTabBarSpringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CCB1CF917B900D1B7BE /* TLTabBarSpringController.swift */; };
+		49740CCE1CF917B900D1B7BE /* TLTabBarSpringController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CCB1CF917B900D1B7BE /* TLTabBarSpringController.swift */; };
+		49740CD01CF9180900D1B7BE /* TLTabBarSpringItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CCF1CF9180900D1B7BE /* TLTabBarSpringItem.swift */; };
+		49740CD11CF9180900D1B7BE /* TLTabBarSpringItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CCF1CF9180900D1B7BE /* TLTabBarSpringItem.swift */; };
+		49740CD21CF9180900D1B7BE /* TLTabBarSpringItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CCF1CF9180900D1B7BE /* TLTabBarSpringItem.swift */; };
 		4CD9F832EAC58AC0A6D6339257BF8A8E /* Pods-TLTabBarSpring_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B158BF297600F3EBF1F9B5467480BAF /* Pods-TLTabBarSpring_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6140EBB56A88D060DEAC42EFF231DF61 /* TLTabBarSpring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 087A4F6F40922B094C0AB727097476F4 /* TLTabBarSpring-dummy.m */; };
+		6AAB008AD96C9366C8870F0B7CB4AF8F /* TLTabBarSpring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 087A4F6F40922B094C0AB727097476F4 /* TLTabBarSpring-dummy.m */; };
 		6AF873A65B0F6DFA17F283B4C4A3427A /* Pods-TLTabBarSpring_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22510300B20CD41A524BA2B216CED8F8 /* Pods-TLTabBarSpring_Example-dummy.m */; };
 		712397ECA151BA56437FB27357E692A9 /* TLTabBarSpring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F7F836F197B4A3B18D72202EDF8D66F1 /* TLTabBarSpring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91FF7D681F3E6DEBEBDA904E041EC766 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B59D1C354C871F768A3D374C646E293B /* TLBoundAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99058A17B2F635D13104FEA373A43BCD /* TLBoundAnimation.swift */; };
+		D3BFBE9E393D8BFBDD6DED7A6EE435BC /* TLBaseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C37E91143948CF6C7E37EBBE00E8FFA /* TLBaseAnimation.swift */; };
 		D77E3DECB12424AF76F11192619E7E9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,12 +58,15 @@
 		44D7693088647568DD17C6D6C68B6C88 /* TLTabBarSpring.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TLTabBarSpring.xcconfig; sourceTree = "<group>"; };
 		452506C13EAF5F048CB42DE2288130B2 /* Pods-TLTabBarSpring_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TLTabBarSpring_Example.modulemap"; sourceTree = "<group>"; };
 		4616675B26195E5882D4DCB2CB47E12A /* Pods-TLTabBarSpring_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTabBarSpring_Example.release.xcconfig"; sourceTree = "<group>"; };
-		49740CC31CF8936900D1B7BE /* TLBaseAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLBaseAnimation.swift; sourceTree = "<group>"; };
+		49740CCB1CF917B900D1B7BE /* TLTabBarSpringController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLTabBarSpringController.swift; sourceTree = "<group>"; };
+		49740CCF1CF9180900D1B7BE /* TLTabBarSpringItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TLTabBarSpringItem.swift; path = ../TLTabBarSpringItem.swift; sourceTree = "<group>"; };
 		4E3FACCE6EC8CB22863ADA9CE47388B3 /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		5393F91E2AC0B21ED40F93AD9BBAC65A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56EAC46DAEEED89BDC1B386C49E8282F /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-resources.sh"; sourceTree = "<group>"; };
 		5BFB1F4665F7281E248B1B8662D74F10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E44062FDACCF121B1DC9285C404A96C /* Pods_TLTabBarSpring_Example_TLTabBarSpring_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLTabBarSpring_Example_TLTabBarSpring_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99058A17B2F635D13104FEA373A43BCD /* TLBoundAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TLBoundAnimation.swift; sourceTree = "<group>"; };
+		9C37E91143948CF6C7E37EBBE00E8FFA /* TLBaseAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TLBaseAnimation.swift; sourceTree = "<group>"; };
 		9D580BE5ECBA7DD8908BB01BDC01BB52 /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A9E9029CA583940DA5D2F308268DA7D4 /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-umbrella.h"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -110,14 +118,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		49740CC21CF8933400D1B7BE /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				49740CC31CF8936900D1B7BE /* TLBaseAnimation.swift */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
 		4D3F01E330DFD95EEB7B82A44B307FD6 /* TLTabBarSpring */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +126,16 @@
 			);
 			name = TLTabBarSpring;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		4F60FD0EC6F26542E86A063A5497791A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49740CCB1CF917B900D1B7BE /* TLTabBarSpringController.swift */,
+				49740CCF1CF9180900D1B7BE /* TLTabBarSpringItem.swift */,
+				5EBF8EF7053AD70AD2FDD9CBC6E680C9 /* Animations */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		5859E00B56FE6F43B32E6A52C52CBA63 /* Support Files */ = {
@@ -142,20 +152,21 @@
 			path = "Example/Pods/Target Support Files/TLTabBarSpring";
 			sourceTree = "<group>";
 		};
+		5EBF8EF7053AD70AD2FDD9CBC6E680C9 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				9C37E91143948CF6C7E37EBBE00E8FFA /* TLBaseAnimation.swift */,
+				99058A17B2F635D13104FEA373A43BCD /* TLBoundAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		607ADDDC03865A56CB2DAF81377E23D0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
 				4D3F01E330DFD95EEB7B82A44B307FD6 /* TLTabBarSpring */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		6901ACB7B18471A69F7EF776D6FAE5E4 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				49740CC21CF8933400D1B7BE /* Animations */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		6D3CD22F6D62669124D89E089052ABE5 /* Products */ = {
@@ -182,7 +193,7 @@
 		9CEF1970FA2DE3C1F732D9EADD77DD02 /* TLTabBarSpring */ = {
 			isa = PBXGroup;
 			children = (
-				6901ACB7B18471A69F7EF776D6FAE5E4 /* Classes */,
+				4F60FD0EC6F26542E86A063A5497791A /* Classes */,
 			);
 			path = TLTabBarSpring;
 			sourceTree = "<group>";
@@ -291,7 +302,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6956A7338055532C3D1766C3F73EC9F /* Build configuration list for PBXNativeTarget "TLTabBarSpring" */;
 			buildPhases = (
-				BD5D100D2BD94E66666892A98FD4412B /* Sources */,
+				7AE73B86ACC4722331F1A4097B6F0F06 /* Sources */,
 				87A1185FC49416B6E8EF2B5033D84744 /* Frameworks */,
 				089E670E0DDEE47CCE417B0048DD3654 /* Headers */,
 			);
@@ -355,17 +366,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49740CCC1CF917B900D1B7BE /* TLTabBarSpringController.swift in Sources */,
+				49740CD01CF9180900D1B7BE /* TLTabBarSpringItem.swift in Sources */,
 				6AF873A65B0F6DFA17F283B4C4A3427A /* Pods-TLTabBarSpring_Example-dummy.m in Sources */,
-				49740CC41CF8936900D1B7BE /* TLBaseAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BD5D100D2BD94E66666892A98FD4412B /* Sources */ = {
+		7AE73B86ACC4722331F1A4097B6F0F06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6140EBB56A88D060DEAC42EFF231DF61 /* TLTabBarSpring-dummy.m in Sources */,
-				49740CC61CF8936900D1B7BE /* TLBaseAnimation.swift in Sources */,
+				49740CCE1CF917B900D1B7BE /* TLTabBarSpringController.swift in Sources */,
+				D3BFBE9E393D8BFBDD6DED7A6EE435BC /* TLBaseAnimation.swift in Sources */,
+				49740CD21CF9180900D1B7BE /* TLTabBarSpringItem.swift in Sources */,
+				B59D1C354C871F768A3D374C646E293B /* TLBoundAnimation.swift in Sources */,
+				6AAB008AD96C9366C8870F0B7CB4AF8F /* TLTabBarSpring-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,8 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49740CCD1CF917B900D1B7BE /* TLTabBarSpringController.swift in Sources */,
+				49740CD11CF9180900D1B7BE /* TLTabBarSpringItem.swift in Sources */,
 				01DD83DECCD9CC7C8BEB6E6942DA508B /* Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-dummy.m in Sources */,
-				49740CC51CF8936900D1B7BE /* TLBaseAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

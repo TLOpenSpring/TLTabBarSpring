@@ -12,13 +12,31 @@ import TLTabBarSpring
 class SecondController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        //self.title="SecondController"
+        self.view.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        initStyle()
+        initView()
+    }
+    
+    
+    func initStyle() -> Void {
+        let tabBarSpringItem:TLTabBarSpringItem = self.tabBarItem as! TLTabBarSpringItem
         
-        if(self.tabBarItem != nil){
-            print(self.tabBarItem)
-            let springTabBarItem:TLTabBarSpringItem = self.tabBarItem as! TLTabBarSpringItem;
-            springTabBarItem.animation = TLBoundAnimation()
-            springTabBarItem.playAnimation()
-            
-        }
+        tabBarSpringItem.textColor = UIColor.grayColor()
+        tabBarSpringItem.iconColor = UIColor.grayColor()
+        
+        tabBarSpringItem.animation.textSelctedColor=UIColor.redColor()
+        tabBarSpringItem.animation.iconSelectedColor=UIColor.redColor()
+    }
+    
+    func initView() -> Void {
+        
+        let rect =  CGRectMake(100, 100,200, 100);
+        let btn=UIButton(frame: rect)
+        btn.center=self.view.center
+        btn.setTitle("SecondController", forState: .Normal)
+        btn.setTitleColor(UIColor.redColor(), forState: .Normal)
+        self.view.addSubview(btn)
     }
 }

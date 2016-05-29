@@ -11,22 +11,46 @@ import TLTabBarSpring
 
 class FirstController: UIViewController {
     
- 
+    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        initStyle()
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.title="FirstController";
+        self.view.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        
+        self.tabBarController?.tabBar.tintColor = UIColor.redColor()
+        
+       
+        initStyle()
+        
+        initView()
+    }
+    
+    func initStyle() -> Void {
+        let tabBarSpringItem:TLTabBarSpringItem = self.tabBarItem as! TLTabBarSpringItem
+        
+        tabBarSpringItem.textColor = UIColor.grayColor()
+        tabBarSpringItem.iconColor = UIColor.grayColor()
+        
+        tabBarSpringItem.animation.textSelctedColor=UIColor.redColor()
+        tabBarSpringItem.animation.iconSelectedColor=UIColor.redColor()
         
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        if(self.tabBarItem != nil){
-            print(self.tabBarItem)
-            let springTabBarItem:TLTabBarSpringItem = self.tabBarItem as! TLTabBarSpringItem;
-            springTabBarItem.animation = TLBoundAnimation()
-            springTabBarItem.playAnimation()
-            
-        }
+    func initView() -> Void {
+        
+        let rect =  CGRectMake(100, 100,200, 100);
+        let btn=UIButton(frame: rect)
+        btn.center=self.view.center
+        btn.setTitle("FirstController", forState: .Normal)
+        btn.setTitleColor(UIColor.redColor(), forState: .Normal)
+        self.view.addSubview(btn)
     }
+    
+
 }

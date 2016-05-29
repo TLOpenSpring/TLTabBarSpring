@@ -49,7 +49,7 @@ public class TLBaseAnimation: NSObject,TLAnimationProtocol {
     
     //MARK: - properties
    public var duration:CGFloat=0.5
-   public var textSelctedColor:UIColor = UIColor.redColor()
+   public var textSelctedColor:UIColor!
    public var iconSelectedColor:UIColor!
 
     

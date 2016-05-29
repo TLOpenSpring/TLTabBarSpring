@@ -10,18 +10,18 @@ import UIKit
 
 public class TLTabBarSpringItem: UITabBarItem {
     //声明动画基类
-    public var animation:TLBaseAnimation!
+    @IBOutlet public var animation:TLBaseAnimation!
     
     public var iconView:(icon:UIImageView , textLb:UILabel)?
     
-     public var textColor: UIColor = UIColor.blackColor()
+     public var textColor: UIColor = UIColor.clearColor()
      public var iconColor: UIColor = UIColor.clearColor() // if alpha color is 0 color ignoring
     
-    public var DefaultBackgroundColor:UIColor = UIColor.brownColor()
-    public var selectBackgroundColor:UIColor = UIColor.yellowColor()
+    public var DefaultBackgroundColor:UIColor = UIColor.clearColor()
+    public var selectBackgroundColor:UIColor = UIColor.clearColor()
 
     public func playAnimation(){
-    assert(animation != nil,"必须在UitabBarItem中添加一个animation")
+        assert(animation != nil,"必须在UitabBarItem中添加一个animation")
         guard animation != nil && iconView != nil else {
            return
         }

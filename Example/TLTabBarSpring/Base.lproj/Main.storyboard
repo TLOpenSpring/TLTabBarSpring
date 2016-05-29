@@ -18,9 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="Settings" id="YIt-5a-OYr" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="Settings" id="YIt-5a-OYr" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring">
+                        <connections>
+                            <outlet property="animation" destination="3bg-ng-Tkj" id="wU6-o5-KZ6"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tln-rj-Ugy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="3bg-ng-Tkj" customClass="TLBoundAnimation" customModule="TLTabBarSpring"/>
             </objects>
             <point key="canvasLocation" x="555" y="592"/>
         </scene>
@@ -37,16 +42,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="icon_pin" id="qAD-KA-xeJ" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="icon_pin" id="qAD-KA-xeJ" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring">
+                        <connections>
+                            <outlet property="animation" destination="6NM-dQ-Qsv" id="ePY-DQ-STz"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="You-25-8Uf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="6NM-dQ-Qsv" customClass="TLBoundAnimation" customModule="TLTabBarSpring"/>
             </objects>
             <point key="canvasLocation" x="555" y="-69"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab Bar Spring Controller-->
         <scene sceneID="VXg-sd-Wir">
             <objects>
-                <tabBarController id="Rgd-iT-yTA" customClass="ViewController" customModule="TLTabBarSpring" sceneMemberID="viewController">
+                <tabBarController id="Rgd-iT-yTA" customClass="TLTabBarSpringController" customModule="TLTabBarSpring" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="UqU-uU-t3X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

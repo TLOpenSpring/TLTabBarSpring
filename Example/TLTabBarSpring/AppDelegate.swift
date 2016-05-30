@@ -44,21 +44,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let vc2=CustomController2()
         vc2.tabBarItem = TLTabBarSpringItem()
-         (vc2.tabBarItem as! TLTabBarSpringItem).animation=TLBoundAnimation()
+         (vc2.tabBarItem as! TLTabBarSpringItem).animation = TLRotationAnimation()
         vc2.tabBarItem.title="发现"
         vc2.tabBarItem.image=UIImage(named: "icon_pin")
         initStyle(vc2.tabBarItem)
         
         let vc3=CustomController3()
         vc3.tabBarItem = TLTabBarSpringItem()
-        (vc3.tabBarItem as! TLTabBarSpringItem).animation=TLBoundAnimation()
+        (vc3.tabBarItem as! TLTabBarSpringItem).animation=TLTransitionAnimation(transition: .TransitionFlipFromBottom)
         vc3.tabBarItem.title="消息"
         vc3.tabBarItem.image=UIImage(named: "Tools_00028")
          initStyle(vc3.tabBarItem)
         
         let vc4=CustomController4()
         vc4.tabBarItem = TLTabBarSpringItem()
-        (vc4.tabBarItem as! TLTabBarSpringItem).animation=TLBoundAnimation()
+        (vc4.tabBarItem as! TLTabBarSpringItem).animation=TLTransitionAnimation(transition: .TransitionCurlUp)
         vc4.tabBarItem.title="我的"
         vc4.tabBarItem.image=UIImage(named: "drop")
         initStyle(vc4.tabBarItem)

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--SeconViewContrller-->
         <scene sceneID="wVV-rm-iCU">
             <objects>
                 <viewController id="WU2-ga-8Wd" customClass="SecondController" customModule="TLTabBarSpring_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" image="Settings" id="YIt-5a-OYr" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring">
+                    <tabBarItem key="tabBarItem" title="SeconViewContrller" image="Settings" id="YIt-5a-OYr" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring">
                         <connections>
                             <outlet property="animation" destination="3bg-ng-Tkj" id="wU6-o5-KZ6"/>
                         </connections>
@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="555" y="592"/>
         </scene>
-        <!--Item 1-->
+        <!--FirstViewController-->
         <scene sceneID="bv1-TJ-cXZ">
             <objects>
                 <viewController id="beX-By-dWi" customClass="FirstController" customModule="TLTabBarSpring_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="icon_pin" id="qAD-KA-xeJ" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring">
+                    <tabBarItem key="tabBarItem" tag="1" title="FirstViewController" image="icon_pin" id="qAD-KA-xeJ" customClass="TLTabBarSpringItem" customModule="TLTabBarSpring">
                         <connections>
                             <outlet property="animation" destination="6NM-dQ-Qsv" id="ePY-DQ-STz"/>
                         </connections>

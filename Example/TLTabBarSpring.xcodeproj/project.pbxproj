@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		23B37658F97730E89391CE8D /* Pods_TLTabBarSpring_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB3F92DF158F55D19EE0ED9 /* Pods_TLTabBarSpring_Example.framework */; };
+		490C9D361CFBE63900127C8A /* CustomController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C9D351CFBE63900127C8A /* CustomController1.swift */; };
+		490C9D381CFBE65600127C8A /* CustomController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C9D371CFBE65600127C8A /* CustomController2.swift */; };
+		490C9D3A1CFBE8B200127C8A /* CustomController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C9D391CFBE8B200127C8A /* CustomController3.swift */; };
+		490C9D3C1CFBE8C300127C8A /* CustomController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490C9D3B1CFBE8C300127C8A /* CustomController4.swift */; };
 		49740CD41CF96D5E00D1B7BE /* FirstController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CD31CF96D5E00D1B7BE /* FirstController.swift */; };
 		49740CD61CF96D6C00D1B7BE /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49740CD51CF96D6C00D1B7BE /* SecondController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -30,6 +34,10 @@
 
 /* Begin PBXFileReference section */
 		0B74D2CF7AC58ADA06F03045 /* TLTabBarSpring.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TLTabBarSpring.podspec; path = ../TLTabBarSpring.podspec; sourceTree = "<group>"; };
+		490C9D351CFBE63900127C8A /* CustomController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomController1.swift; sourceTree = "<group>"; };
+		490C9D371CFBE65600127C8A /* CustomController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomController2.swift; sourceTree = "<group>"; };
+		490C9D391CFBE8B200127C8A /* CustomController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomController3.swift; sourceTree = "<group>"; };
+		490C9D3B1CFBE8C300127C8A /* CustomController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomController4.swift; sourceTree = "<group>"; };
 		49740CD31CF96D5E00D1B7BE /* FirstController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstController.swift; sourceTree = "<group>"; };
 		49740CD51CF96D6C00D1B7BE /* SecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TLTabBarSpring_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLTabBarSpring_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +76,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490C9D341CFBE61300127C8A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49740CD31CF96D5E00D1B7BE /* FirstController.swift */,
+				49740CD51CF96D6C00D1B7BE /* SecondController.swift */,
+				490C9D351CFBE63900127C8A /* CustomController1.swift */,
+				490C9D371CFBE65600127C8A /* CustomController2.swift */,
+				490C9D391CFBE8B200127C8A /* CustomController3.swift */,
+				490C9D3B1CFBE8C300127C8A /* CustomController4.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -92,14 +113,13 @@
 		607FACD21AFB9204008FA782 /* Example for TLTabBarSpring */ = {
 			isa = PBXGroup;
 			children = (
+				490C9D341CFBE61300127C8A /* Controller */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
-				49740CD31CF96D5E00D1B7BE /* FirstController.swift */,
-				49740CD51CF96D6C00D1B7BE /* SecondController.swift */,
 			);
 			name = "Example for TLTabBarSpring";
 			path = TLTabBarSpring;
@@ -210,6 +230,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = DA9X37GALQ;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -310,9 +331,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49740CD41CF96D5E00D1B7BE /* FirstController.swift in Sources */,
+				490C9D3A1CFBE8B200127C8A /* CustomController3.swift in Sources */,
 				49740CD61CF96D6C00D1B7BE /* SecondController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				490C9D361CFBE63900127C8A /* CustomController1.swift in Sources */,
+				490C9D3C1CFBE8C300127C8A /* CustomController4.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				490C9D381CFBE65600127C8A /* CustomController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,11 +466,14 @@
 			baseConfigurationReference = AFA443DF96933A798FE24284 /* Pods-TLTabBarSpring_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TLTabBarSpring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tongli.demo.TLTabBarSpring-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -454,11 +482,14 @@
 			baseConfigurationReference = 951EC3DC180C678930BB80D9 /* Pods-TLTabBarSpring_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TLTabBarSpring/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.tongli.demo.TLTabBarSpring-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

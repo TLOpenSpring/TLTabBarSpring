@@ -10,11 +10,17 @@ import UIKit
 
 public class TLTabBarSpringController: UITabBarController {
 
+    
+    var  menuCount:Int = 1
+    
     //MARK: - 构造方法
-//    public init(viewControllers:[UIViewController]){
-//        super.init(nibName: nil, bundle: nil)
-//        self.setViewControllers(viewControllers, animated: false)
-//    }
+    public init(viewControllers:[UIViewController]){
+        super.init(nibName: nil, bundle: nil)
+        self.setViewControllers(viewControllers, animated: false)
+               let containers = createContainers()
+               self.creatCustomIcons(containers)
+        
+    }
 //
 //    
 //    public override  init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -24,23 +30,24 @@ public class TLTabBarSpringController: UITabBarController {
 //    }
     
    
+   
     
-    
-//    public required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//        
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+       // fatalError("init(coder:) has not been implemented")
 //        let containers = createContainers()
 //        self.creatCustomIcons(containers)
-//    }
-//
+        
+    }
+
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        let containers = createContainers()
-        self.creatCustomIcons(containers)
+//        let containers = createContainers()
+//        self.creatCustomIcons(containers)
         
-        setSelectIndex(from: 1, to: 0)
+        //setSelectIndex(from: 1, to: 0)
         
     }
     
@@ -71,6 +78,8 @@ public class TLTabBarSpringController: UITabBarController {
             
             let icon = UIImageView(image: item.image?.imageWithRenderingMode(renderMode))
             icon.tintColor = item.iconColor
+            
+            
             icon.frame=CGRectMake(container.frame.size.width/2-icon.frame.size.width/2, 5, icon.frame.size.width, icon.frame.size.height)
             container.addSubview(icon)
             
@@ -108,6 +117,7 @@ public class TLTabBarSpringController: UITabBarController {
           fatalError("请至少添加一个item在TabBar中")
         }
         
+        menuCount = items.count
         //声明一个字典
         var containerDict = [String: AnyObject]()
         
@@ -128,7 +138,9 @@ public class TLTabBarSpringController: UITabBarController {
      */
     func createViewContainer(originX:CGFloat) -> UIView {
         let container = UIView()
-        container.frame=CGRectMake(originX, TLScreen_height-50, TLScreen_width/2, 50)
+        
+       
+        container.frame=CGRectMake(originX, TLScreen_height-50, TLScreen_width/CGFloat(menuCount), 50)
         view.addSubview(container)
         
         //添加手势

@@ -16,6 +16,17 @@ class FirstController: UIViewController {
 //        super.init(coder: aDecoder)
 //        initStyle()
 //    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        initStyle()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

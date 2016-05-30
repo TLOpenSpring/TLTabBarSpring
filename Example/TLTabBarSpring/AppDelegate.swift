@@ -31,10 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let vc1=CustomController1()
+        // #1 设置tabBarItem为类库中指定的
         vc1.tabBarItem = TLTabBarSpringItem()
+        // #2 设置TLTabBarSpringItem的动画类型
         (vc1.tabBarItem as! TLTabBarSpringItem).animation=TLBoundAnimation()
+        // #3 设置显示的标题
         vc1.tabBarItem.title="首页"
+        // #4 设置图标
         vc1.tabBarItem.image=UIImage(named: "icon_user")
+        // #5 设置默认和选中的样式
         initStyle(vc1.tabBarItem)
         
         let vc2=CustomController2()
@@ -63,7 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabVc = TLTabBarSpringController(viewControllers: [vc1,vc2,vc3,vc4])
 
         
-        //tabVc.setViewControllers([vc1,vc2,vc3,vc4], animated: true)
         tabVc.view.backgroundColor=UIColor.whiteColor()
         
         self.window?.backgroundColor = UIColor.whiteColor()

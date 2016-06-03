@@ -87,7 +87,7 @@ public class TLTabBarSpringController: UITabBarController {
             let textLb = UILabel()
             textLb.text = item.title
             textLb.textColor = item.textColor
-            textLb.font=UIFont.systemFontOfSize(13);
+            textLb.font=item.defaultFont
             textLb.textAlignment = .Center
             
             
@@ -157,7 +157,7 @@ public class TLTabBarSpringController: UITabBarController {
      */
     func menuTapHander(gesture:UIGestureRecognizer) -> Void {
         
-        print("点击菜单了menuTapHander")
+       // print("点击菜单了menuTapHander")
         guard let items = tabBar.items as? [TLTabBarSpringItem] else {
             fatalError("item必须继承TLTabBarSpringItem")
         }

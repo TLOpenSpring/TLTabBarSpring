@@ -14,6 +14,9 @@ public class TLTabBarSpringItem: UITabBarItem {
     
     public var iconView:(icon:UIImageView , textLb:UILabel)?
     
+    
+     public var defaultFont:UIFont = UIFont.systemFontOfSize(12)
+    
      public var textColor: UIColor = UIColor.clearColor()
      public var iconColor: UIColor = UIColor.clearColor() // if alpha color is 0 color ignoring
     

@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc2=CustomController2()
         vc2.tabBarItem = TLTabBarSpringItem()
          (vc2.tabBarItem as! TLTabBarSpringItem).animation = TLRotationAnimation()
+         (vc2.tabBarItem as! TLTabBarSpringItem).defaultFont=UIFont.systemFontOfSize(10)
         vc2.tabBarItem.title="发现"
         vc2.tabBarItem.image=UIImage(named: "icon_pin")
         initStyle(vc2.tabBarItem)

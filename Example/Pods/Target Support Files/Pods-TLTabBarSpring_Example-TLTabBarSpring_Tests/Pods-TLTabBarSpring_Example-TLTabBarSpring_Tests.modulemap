@@ -1,6 +1,0 @@
-framework module Pods_TLTabBarSpring_Example_TLTabBarSpring_Tests {
-  umbrella header "Pods-TLTabBarSpring_Example-TLTabBarSpring_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

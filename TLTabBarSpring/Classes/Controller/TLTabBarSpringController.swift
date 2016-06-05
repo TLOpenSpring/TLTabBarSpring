@@ -10,44 +10,38 @@ import UIKit
 
 public class TLTabBarSpringController: UITabBarController {
 
-    
+    public var tlTabbar:UIView!
     var  menuCount:Int = 1
     
     //MARK: - 构造方法
     public init(viewControllers:[UIViewController]){
         super.init(nibName: nil, bundle: nil)
         self.setViewControllers(viewControllers, animated: false)
-               let containers = createContainers()
-               self.creatCustomIcons(containers)
+        
+        let rect = CGRectMake(0, TLScreen_height-50, TLScreen_width, 50)
+        tlTabbar = UIView(frame: rect)
+        self.view.addSubview(tlTabbar)
+        tlTabbar.backgroundColor = UIColor.clearColor()
+        
+        let containers = createContainers()
+        self.creatCustomIcons(containers)
         
     }
-//
-//    
-//    public override  init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//        let containers = createContainers()
-//        self.creatCustomIcons(containers)
-//    }
+
     
    
    
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-       // fatalError("init(coder:) has not been implemented")
-//        let containers = createContainers()
-//        self.creatCustomIcons(containers)
+
         
     }
 
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let containers = createContainers()
-//        self.creatCustomIcons(containers)
-        
-        //setSelectIndex(from: 1, to: 0)
+    
         
     }
     
@@ -140,8 +134,8 @@ public class TLTabBarSpringController: UITabBarController {
         let container = UIView()
         
        
-        container.frame=CGRectMake(originX, TLScreen_height-50, TLScreen_width/CGFloat(menuCount), 50)
-        view.addSubview(container)
+        container.frame=CGRectMake(originX, 0, TLScreen_width/CGFloat(menuCount), 50)
+        tlTabbar.addSubview(container)
         
         //添加手势
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(menuTapHander(_:)))

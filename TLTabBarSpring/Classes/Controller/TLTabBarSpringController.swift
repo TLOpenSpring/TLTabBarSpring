@@ -11,6 +11,9 @@ import UIKit
 public class TLTabBarSpringController: UITabBarController {
 
     public var tlTabbar:UIView!
+    
+    public var topLine:UIView!
+    
     var  menuCount:Int = 1
     
     //MARK: - 构造方法
@@ -18,10 +21,18 @@ public class TLTabBarSpringController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
         self.setViewControllers(viewControllers, animated: false)
         
-        let rect = CGRectMake(0, TLScreen_height-50, TLScreen_width, 50)
+        var rect = CGRectMake(0, TLScreen_height-49, TLScreen_width, 49)
         tlTabbar = UIView(frame: rect)
         self.view.addSubview(tlTabbar)
         tlTabbar.backgroundColor = UIColor.clearColor()
+        
+        
+        rect = CGRectMake(0, 0, TLScreen_width, 1)
+        topLine = UIView(frame:rect)
+        topLine.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        tlTabbar.addSubview(topLine)
+        
+        
         
         let containers = createContainers()
         self.creatCustomIcons(containers)

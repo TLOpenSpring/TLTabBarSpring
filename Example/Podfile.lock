@@ -1,5 +1,5 @@
 PODS:
-  - TLTabBarSpring (1.0.0)
+  - TLTabBarSpring (1.0.5)
 
 DEPENDENCIES:
   - TLTabBarSpring (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  TLTabBarSpring: f741799ae61865d4f2e91159eabdeba96ee5a804
+  TLTabBarSpring: d28da258d958ecb24529e5f63cbf0df4658ea6e8
 
 COCOAPODS: 0.39.0

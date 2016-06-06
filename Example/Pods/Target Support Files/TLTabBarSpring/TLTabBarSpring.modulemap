@@ -1,0 +1,6 @@
+framework module TLTabBarSpring {
+  umbrella header "TLTabBarSpring-umbrella.h"
+
+  export *
+  module * { export * }
+}

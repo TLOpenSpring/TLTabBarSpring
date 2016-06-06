@@ -1,6 +1,6 @@
 {
   "name": "TLTabBarSpring",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "summary": "swift中自定义的Tabbar,支持图标和文字的动画效果.API简单易用",
   "description": "\"自定义的Tabbar,支持图标和文字的动画效果\"",
   "homepage": "https://github.com/TLOpenSpring/TLTabBarSpring",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/TLOpenSpring/TLTabBarSpring.git",
-    "tag": "1.0.0"
+    "tag": "1.0.5"
   },
   "platforms": {
     "ios": "8.0"

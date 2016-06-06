@@ -71,6 +71,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         tabVc.view.backgroundColor=UIColor.whiteColor()
         
+        tabVc.tabBar.hidden = true
+        tabVc.topLine.backgroundColor = UIColor.blackColor()
+        
         self.window?.backgroundColor = UIColor.whiteColor()
         self.window?.rootViewController=tabVc
         self.window?.makeKeyAndVisible()

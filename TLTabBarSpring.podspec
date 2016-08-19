@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TLTabBarSpring'
-  s.version          = '1.0.5'
+  s.version          = '1.0.6'
   s.summary          = 'swift中自定义的Tabbar,支持图标和文字的动画效果.API简单易用'
 
 # This description is used to generate tags and improve search results.

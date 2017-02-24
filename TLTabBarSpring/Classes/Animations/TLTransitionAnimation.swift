@@ -8,14 +8,14 @@
 
 import UIKit
 
-public class TLTransitionAnimation: TLBaseAnimation {
+open class TLTransitionAnimation: TLBaseAnimation {
 
-    public var transitionOptions : UIViewAnimationOptions!
+    open var transitionOptions : UIViewAnimationOptions!
     
     
   public override init() {
         super.init()
-        transitionOptions = UIViewAnimationOptions.TransitionNone
+        transitionOptions = UIViewAnimationOptions()
     }
     
   public  init(transition:UIViewAnimationOptions) {
@@ -23,19 +23,19 @@ public class TLTransitionAnimation: TLBaseAnimation {
      transitionOptions = transition
     }
     
-    public override func startAnimation(icon:UIImageView,textLb:UILabel) -> Void{
+    open override func startAnimation(_ icon:UIImageView,textLb:UILabel) -> Void{
         selectedColor(icon, textLb: textLb)
         
-        UIView.transitionWithView(icon, duration: NSTimeInterval(duration), options: transitionOptions, animations: {
+        UIView.transition(with: icon, duration: TimeInterval(duration), options: transitionOptions, animations: {
             
             }, completion: nil)
     }
     
-    public override func deSelectAnimation(icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
+    open override func deSelectAnimation(_ icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
                                   defaultIconColor:UIColor) -> Void{
         if let iconImg = icon.image {
-            let renderMode = CGColorGetAlpha(defaultIconColor.CGColor) == 0 ? UIImageRenderingMode.AlwaysOriginal:UIImageRenderingMode.AlwaysTemplate
-            let renderImage = iconImg.imageWithRenderingMode(renderMode)
+            let renderMode = defaultIconColor.cgColor.alpha == 0 ? UIImageRenderingMode.alwaysOriginal:UIImageRenderingMode.alwaysTemplate
+            let renderImage = iconImg.withRenderingMode(renderMode)
             icon.image = renderImage
             icon.tintColor = defaultIconColor
         }
@@ -45,13 +45,13 @@ public class TLTransitionAnimation: TLBaseAnimation {
         
     }
     
-    public override func selectState(icon:UIImageView,textLb:UILabel) -> Void{
+    open override func selectState(_ icon:UIImageView,textLb:UILabel) -> Void{
         selectedColor(icon, textLb: textLb)
     }
     
-    func selectedColor(icon:UIImageView,textLb:UILabel) -> Void {
-        if let iconImage = icon.image where iconSelectedColor != nil{
-          let renderImage = iconImage.imageWithRenderingMode(.AlwaysTemplate)
+    func selectedColor(_ icon:UIImageView,textLb:UILabel) -> Void {
+        if let iconImage = icon.image, iconSelectedColor != nil{
+          let renderImage = iconImage.withRenderingMode(.alwaysTemplate)
             icon.image = renderImage
             icon.tintColor = iconSelectedColor
         }
@@ -60,24 +60,24 @@ public class TLTransitionAnimation: TLBaseAnimation {
     
 }
 
-public class TLFlipLeftTransitionAnimation: TLTransitionAnimation {
+open class TLFlipLeftTransitionAnimation: TLTransitionAnimation {
   public  override init() {
         super.init()
-        transitionOptions = UIViewAnimationOptions.TransitionFlipFromLeft
+        transitionOptions = UIViewAnimationOptions.transitionFlipFromLeft
     }
 }
 
-public class TLFlipRightTransitionAnimation: TLTransitionAnimation {
+open class TLFlipRightTransitionAnimation: TLTransitionAnimation {
   public  override init() {
         super.init()
-        transitionOptions = UIViewAnimationOptions.TransitionFlipFromRight
+        transitionOptions = UIViewAnimationOptions.transitionFlipFromRight
     }
 }
 
-public class TLFlipBottomTransitionAnimation: TLTransitionAnimation {
+open class TLFlipBottomTransitionAnimation: TLTransitionAnimation {
   public  override init() {
         super.init()
-        transitionOptions = UIViewAnimationOptions.TransitionFlipFromBottom
+        transitionOptions = UIViewAnimationOptions.transitionFlipFromBottom
     }
 }
 
@@ -85,7 +85,7 @@ public class TLFlipBottomTransitionAnimation: TLTransitionAnimation {
 class TLFlipTopTransitionAnimation: TLTransitionAnimation {
    public override init() {
         super.init()
-        transitionOptions = UIViewAnimationOptions.TransitionFlipFromTop
+        transitionOptions = UIViewAnimationOptions.transitionFlipFromTop
     }
 }
 

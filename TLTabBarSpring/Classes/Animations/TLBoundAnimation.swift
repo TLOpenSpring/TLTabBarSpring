@@ -8,50 +8,50 @@
 
 import UIKit
 
-public class TLBoundAnimation: TLBaseAnimation {
+open class TLBoundAnimation: TLBaseAnimation {
 
-    override public func startAnimation(icon:UIImageView,textLb:UILabel) -> Void{
+    override open func startAnimation(_ icon:UIImageView,textLb:UILabel) -> Void{
         tl_bounceAnimation(icon)
         textLb.textColor = textSelctedColor
     }
     
-    override public func deSelectAnimation(icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
+    override open func deSelectAnimation(_ icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
                          defaultIconColor:UIColor) -> Void{
         
         textLb.textColor = defaultIconColor;
         if let iconImg = icon.image {
-            let renderMode = CGColorGetAlpha(defaultIconColor.CGColor) == 0 ? UIImageRenderingMode.AlwaysOriginal :
-                UIImageRenderingMode.AlwaysTemplate
+            let renderMode = defaultIconColor.cgColor.alpha == 0 ? UIImageRenderingMode.alwaysOriginal :
+                UIImageRenderingMode.alwaysTemplate
             
-            let renderImage = iconImg.imageWithRenderingMode(renderMode)
+            let renderImage = iconImg.withRenderingMode(renderMode)
             icon.image = renderImage
             icon.tintColor = defaultIconColor
         }
     
     }
     
-    override public func selectState(icon:UIImageView,textLb:UILabel) -> Void{
+    override open func selectState(_ icon:UIImageView,textLb:UILabel) -> Void{
     //设置文本的颜色
         textLb.textColor = textSelctedColor
         if let iconImg = icon.image{
-         let renderImage = iconImg.imageWithRenderingMode(.AlwaysTemplate)
+         let renderImage = iconImg.withRenderingMode(.alwaysTemplate)
             icon.image = renderImage
             icon.tintColor = iconSelectedColor
         }
     }
     
     
-    func tl_bounceAnimation(icon:UIImageView) -> Void {
+    func tl_bounceAnimation(_ icon:UIImageView) -> Void {
         let bounceAnimation = CAKeyframeAnimation(keyPath: AnimationKeys.Scale)
         
         bounceAnimation.values = [1.0 ,1.4, 0.9, 1.15, 0.95, 1.02, 1.0]
-        bounceAnimation.duration = NSTimeInterval(duration)
+        bounceAnimation.duration = TimeInterval(duration)
         bounceAnimation.calculationMode = kCAAnimationCubic
         
-        icon.layer.addAnimation(bounceAnimation, forKey: "TLBounce")
+        icon.layer.add(bounceAnimation, forKey: "TLBounce")
         
         if let iconImg = icon.image {
-            let renderImg = iconImg.imageWithRenderingMode(.AlwaysTemplate)
+            let renderImg = iconImg.withRenderingMode(.alwaysTemplate)
             icon.image = renderImg
             icon.tintColor = iconSelectedColor
         }

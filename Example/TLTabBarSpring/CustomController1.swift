@@ -12,19 +12,19 @@ class CustomController1: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         initView()
     }
     
     func initView() -> Void {
         
-        let rect = CGRectMake(100, 100, 200, 40)
+        let rect = CGRect(x: 100, y: 100, width: 200, height: 40)
         
         let btn = UIButton(frame: rect)
         btn.center=self.view.center
-        btn.setTitle("首页", forState: .Normal)
-        btn.setTitleColor(UIColor.redColor(), forState: .Normal)
-        btn.titleLabel?.font=UIFont.boldSystemFontOfSize(28)
+        btn.setTitle("首页", for: UIControlState())
+        btn.setTitleColor(UIColor.red, for: UIControlState())
+        btn.titleLabel?.font=UIFont.boldSystemFont(ofSize: 28)
         self.view.addSubview(btn)
     }
 }

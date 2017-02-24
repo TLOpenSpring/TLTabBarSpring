@@ -9,34 +9,34 @@
 import UIKit
 
 public enum TLRotationDirection {
-    case Left
-    case Right
+    case left
+    case right
 }
 
-public class TLRotationAnimation: TLBaseAnimation {
+open class TLRotationAnimation: TLBaseAnimation {
     
     
    public override init() {
         super.init()
-        direcation = .Left
+        direcation = .left
     }
     
-    public var direcation : TLRotationDirection!
+    open var direcation : TLRotationDirection!
     
     
     
-    public override func startAnimation(icon:UIImageView,textLb:UILabel) -> Void{
+    open override func startAnimation(_ icon:UIImageView,textLb:UILabel) -> Void{
         playRotationAnimation(icon)
         textLb.textColor=textSelctedColor
     }
     
-    public override func deSelectAnimation(icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
+    open override func deSelectAnimation(_ icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
                                   defaultIconColor:UIColor) -> Void{
         
         if let iconImg = icon.image {
-            let renderMode = CGColorGetAlpha(defaultIconColor.CGColor) == 0 ? UIImageRenderingMode.AlwaysOriginal : UIImageRenderingMode.AlwaysTemplate
+            let renderMode = defaultIconColor.cgColor.alpha == 0 ? UIImageRenderingMode.alwaysOriginal : UIImageRenderingMode.alwaysTemplate
             
-            let renderImage = iconImg.imageWithRenderingMode(renderMode)
+            let renderImage = iconImg.withRenderingMode(renderMode)
             icon.image = renderImage
             icon.tintColor = defaultIconColor
         }
@@ -44,26 +44,26 @@ public class TLRotationAnimation: TLBaseAnimation {
         textLb.textColor = defaultTextColor
     }
     
-    public override func selectState(icon:UIImageView,textLb:UILabel) -> Void{
+    open override func selectState(_ icon:UIImageView,textLb:UILabel) -> Void{
         
     }
     
-    func playRotationAnimation(icon:UIImageView) -> Void {
+    func playRotationAnimation(_ icon:UIImageView) -> Void {
         let rotationAnimation = CABasicAnimation(keyPath: AnimationKeys.Rotation)
         rotationAnimation.fromValue = 0.0
         
         
         var toValue = CGFloat(M_PI * 2)
-        if direcation != nil && direcation == TLRotationDirection.Left {
+        if direcation != nil && direcation == TLRotationDirection.left {
           toValue = toValue * -1
         }
         
         rotationAnimation.toValue = toValue
-        rotationAnimation.duration = NSTimeInterval(duration)
-        icon.layer.addAnimation(rotationAnimation, forKey: "TLRotation")
+        rotationAnimation.duration = TimeInterval(duration)
+        icon.layer.add(rotationAnimation, forKey: "TLRotation")
         
         if let iconImg = icon.image {
-         let renderImage = iconImg.imageWithRenderingMode(.AlwaysTemplate)
+         let renderImage = iconImg.withRenderingMode(.alwaysTemplate)
             icon.image=renderImage
             icon.tintColor = iconSelectedColor
         }

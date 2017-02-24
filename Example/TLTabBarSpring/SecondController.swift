@@ -26,7 +26,7 @@ class SecondController: UIViewController {
         super.viewDidLoad()
      
         //self.title="SecondController"
-        self.view.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        self.view.backgroundColor = UIColor.groupTableViewBackground
         initStyle()
         initView()
     }
@@ -35,20 +35,20 @@ class SecondController: UIViewController {
     func initStyle() -> Void {
         let tabBarSpringItem:TLTabBarSpringItem = self.tabBarItem as! TLTabBarSpringItem
         
-        tabBarSpringItem.textColor = UIColor.grayColor()
-        tabBarSpringItem.iconColor = UIColor.grayColor()
+        tabBarSpringItem.textColor = UIColor.gray
+        tabBarSpringItem.iconColor = UIColor.gray
         
-        tabBarSpringItem.animation.textSelctedColor=UIColor.redColor()
-        tabBarSpringItem.animation.iconSelectedColor=UIColor.redColor()
+        tabBarSpringItem.animation.textSelctedColor=UIColor.red
+        tabBarSpringItem.animation.iconSelectedColor=UIColor.red
     }
     
     func initView() -> Void {
         
-        let rect =  CGRectMake(100, 100,200, 100);
+        let rect =  CGRect(x: 100, y: 100,width: 200, height: 100);
         let btn=UIButton(frame: rect)
         btn.center=self.view.center
-        btn.setTitle("SecondController", forState: .Normal)
-        btn.setTitleColor(UIColor.redColor(), forState: .Normal)
+        btn.setTitle("SecondController", for: UIControlState())
+        btn.setTitleColor(UIColor.red, for: UIControlState())
         self.view.addSubview(btn)
     }
 }

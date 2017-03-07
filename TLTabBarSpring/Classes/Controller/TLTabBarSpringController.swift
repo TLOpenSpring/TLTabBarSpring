@@ -8,11 +8,11 @@
 
 import UIKit
 
-public class TLTabBarSpringController: UITabBarController {
+open class TLTabBarSpringController: UITabBarController {
 
-    public var tlTabbar:UIView!
+    open var tlTabbar:UIView!
     
-    public var topLine:UIView!
+    open var topLine:UIView!
     
     var  menuCount:Int = 1
     
@@ -21,15 +21,15 @@ public class TLTabBarSpringController: UITabBarController {
         super.init(nibName: nil, bundle: nil)
         self.setViewControllers(viewControllers, animated: false)
         
-        var rect = CGRectMake(0, TLScreen_height-49, TLScreen_width, 49)
+        var rect = CGRect(x: 0, y: TLScreen_height-49, width: TLScreen_width, height: 49)
         tlTabbar = UIView(frame: rect)
         self.view.addSubview(tlTabbar)
-        tlTabbar.backgroundColor = UIColor.clearColor()
+        tlTabbar.backgroundColor = UIColor.clear
         
         
-        rect = CGRectMake(0, 0, TLScreen_width, 1)
+        rect = CGRect(x: 0, y: 0, width: TLScreen_width, height: 1)
         topLine = UIView(frame:rect)
-        topLine.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        topLine.backgroundColor = UIColor.groupTableViewBackground
         tlTabbar.addSubview(topLine)
         
         
@@ -50,14 +50,14 @@ public class TLTabBarSpringController: UITabBarController {
     }
 
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
     
         
     }
     
     //MARK: - private method
-    func creatCustomIcons(containers:NSDictionary) -> Void {
+    func creatCustomIcons(_ containers:NSDictionary) -> Void {
         
         guard let items = tabBar.items as? [TLTabBarSpringItem] else {
          fatalError("items 必须继承TLTabbarSpringItem")
@@ -77,15 +77,15 @@ public class TLTabBarSpringController: UITabBarController {
             
             let tlTabBarItem = item as TLTabBarSpringItem
             
-            let renderMode = CGColorGetAlpha(item.iconColor.CGColor) == 0 ? UIImageRenderingMode.AlwaysOriginal :
-                UIImageRenderingMode.AlwaysTemplate
+            let renderMode = item.iconColor.cgColor.alpha == 0 ? UIImageRenderingMode.alwaysOriginal :
+                UIImageRenderingMode.alwaysTemplate
             
             
-            let icon = UIImageView(image: item.image?.imageWithRenderingMode(renderMode))
+            let icon = UIImageView(image: item.image?.withRenderingMode(renderMode))
             icon.tintColor = item.iconColor
             
             
-            icon.frame=CGRectMake(container.frame.size.width/2-icon.frame.size.width/2, 5, icon.frame.size.width, icon.frame.size.height)
+            icon.frame=CGRect(x: container.frame.size.width/2-icon.frame.size.width/2, y: 5, width: icon.frame.size.width, height: icon.frame.size.height)
             container.addSubview(icon)
             
             //文本显示
@@ -93,11 +93,11 @@ public class TLTabBarSpringController: UITabBarController {
             textLb.text = item.title
             textLb.textColor = item.textColor
             textLb.font=item.defaultFont
-            textLb.textAlignment = .Center
+            textLb.textAlignment = .center
             
             
             let textLabelWidth = tabBar.frame.size.width / CGFloat(items.count)-1
-            textLb.frame=CGRectMake(0, container.frame.size.height-15, textLabelWidth, 15)
+            textLb.frame=CGRect(x: 0, y: container.frame.size.height-15, width: textLabelWidth, height: 15)
             
             container.addSubview(textLb)
             
@@ -130,9 +130,9 @@ public class TLTabBarSpringController: UITabBarController {
         for index in 0..<items.count {
             let container:UIView = createViewContainer(originX)
             containerDict["container\(index)"] = container
-            originX = CGRectGetMaxX(container.frame)
+            originX = container.frame.maxX
         }
-        return containerDict
+        return containerDict as NSDictionary
         
     }
     
@@ -141,11 +141,11 @@ public class TLTabBarSpringController: UITabBarController {
      
      - returns: UIView
      */
-    func createViewContainer(originX:CGFloat) -> UIView {
+    func createViewContainer(_ originX:CGFloat) -> UIView {
         let container = UIView()
         
        
-        container.frame=CGRectMake(originX, 0, TLScreen_width/CGFloat(menuCount), 50)
+        container.frame=CGRect(x: originX, y: 0, width: TLScreen_width/CGFloat(menuCount), height: 50)
         tlTabbar.addSubview(container)
         
         //添加手势
@@ -160,7 +160,7 @@ public class TLTabBarSpringController: UITabBarController {
      
      - parameter gesture: 单击手势
      */
-    func menuTapHander(gesture:UIGestureRecognizer) -> Void {
+    func menuTapHander(_ gesture:UIGestureRecognizer) -> Void {
         
        // print("点击菜单了menuTapHander")
         guard let items = tabBar.items as? [TLTabBarSpringItem] else {
@@ -176,7 +176,7 @@ public class TLTabBarSpringController: UITabBarController {
         //获取当前的控制器
         let controller = self.childViewControllers[currentIndex]
         
-        if let shouldSelect = delegate?.tabBarController?(self, shouldSelectViewController: controller) where !shouldSelect{
+        if let shouldSelect = delegate?.tabBarController?(self, shouldSelect: controller), !shouldSelect{
           return
         }
         
@@ -197,13 +197,13 @@ public class TLTabBarSpringController: UITabBarController {
             
             selectedIndex = gestureView.tag
             
-            delegate?.tabBarController?(self, didSelectViewController: controller)
+            delegate?.tabBarController?(self, didSelect: controller)
             
             
             
         }else if selectedIndex == currentIndex {
             if let navigatonVC = self.viewControllers![selectedIndex] as? UINavigationController{
-             navigatonVC.popViewControllerAnimated(true)
+             navigatonVC.popViewController(animated: true)
             }
         }
     }
@@ -227,7 +227,7 @@ public class TLTabBarSpringController: UITabBarController {
 //MARK: - 对TLTabBarSpringController扩展
  extension TLTabBarSpringController {
 
-    public func changeSelectedColor(textselectedColor:UIColor,iconSelectedColor:UIColor){
+    public func changeSelectedColor(_ textselectedColor:UIColor,iconSelectedColor:UIColor){
      let items = tabBar.items as! [TLTabBarSpringItem]
         
         for index  in 0..<items.count {
@@ -243,7 +243,7 @@ public class TLTabBarSpringController: UITabBarController {
     }
     
     
-    func setSelectIndex(from from: Int,to : Int) -> Void {
+    func setSelectIndex(from: Int,to : Int) -> Void {
         selectedIndex = to
         
         guard let items = tabBar.items as? [TLTabBarSpringItem] else {

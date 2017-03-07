@@ -8,11 +8,11 @@
 
 import UIKit
 
-public let TLScreen_width = UIScreen.mainScreen().bounds.width
-public let TLScreen_height = UIScreen.mainScreen().bounds.height
+public let TLScreen_width = UIScreen.main.bounds.width
+public let TLScreen_height = UIScreen.main.bounds.height
 
 protocol TLAnimationProtocol {
-    func startAnimation(icon:UIImageView,textLb:UILabel) -> Void;
+    func startAnimation(_ icon:UIImageView,textLb:UILabel) -> Void;
     /**
      取消选定
      
@@ -23,7 +23,7 @@ protocol TLAnimationProtocol {
      
      - returns:
      */
-    func deSelectAnimation(icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
+    func deSelectAnimation(_ icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
                          defaultIconColor:UIColor) -> Void;
     
     /**
@@ -34,11 +34,11 @@ protocol TLAnimationProtocol {
      
      - returns: <#return value description#>
      */
-    func selectState(icon:UIImageView,textLb:UILabel) -> Void;
+    func selectState(_ icon:UIImageView,textLb:UILabel) -> Void;
 }
 
 
-public class TLBaseAnimation: NSObject,TLAnimationProtocol {
+open class TLBaseAnimation: NSObject,TLAnimationProtocol {
     
     public struct AnimationKeys{
         static let Scale = "transform.scale"
@@ -48,21 +48,21 @@ public class TLBaseAnimation: NSObject,TLAnimationProtocol {
     }
     
     //MARK: - properties
-   public var duration:CGFloat=0.5
-   public var textSelctedColor:UIColor!
-   public var iconSelectedColor:UIColor!
+   open var duration:CGFloat=0.5
+   open var textSelctedColor:UIColor!
+   open var iconSelectedColor:UIColor!
 
     
-   public func startAnimation(icon:UIImageView,textLb:UILabel) -> Void{
+   open func startAnimation(_ icon:UIImageView,textLb:UILabel) -> Void{
     
     }
     
-   public func deSelectAnimation(icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
+   open func deSelectAnimation(_ icon:UIImageView,textLb:UILabel,defaultTextColor:UIColor,
                          defaultIconColor:UIColor) -> Void{
     
     }
     
-   public func selectState(icon:UIImageView,textLb:UILabel) -> Void{
+   open func selectState(_ icon:UIImageView,textLb:UILabel) -> Void{
     
     }
 }

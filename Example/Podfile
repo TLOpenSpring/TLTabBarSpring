@@ -4,7 +4,7 @@ target 'TLTabBarSpring_Example' do
   pod 'TLTabBarSpring', :path => '../'
 
   target 'TLTabBarSpring_Tests' do
-    #inherit! :search_paths
+    inherit! :search_paths
 
     
   end

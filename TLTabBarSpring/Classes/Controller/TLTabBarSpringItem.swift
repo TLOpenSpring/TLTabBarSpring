@@ -8,22 +8,22 @@
 
 import UIKit
 
-public class TLTabBarSpringItem: UITabBarItem {
+open class TLTabBarSpringItem: UITabBarItem {
     //声明动画基类
-    @IBOutlet public var animation:TLBaseAnimation!
+    @IBOutlet open var animation:TLBaseAnimation!
     
-    public var iconView:(icon:UIImageView , textLb:UILabel)?
+    open var iconView:(icon:UIImageView , textLb:UILabel)?
     
     
-     public var defaultFont:UIFont = UIFont.systemFontOfSize(12)
+     open var defaultFont:UIFont = UIFont.systemFont(ofSize: 12)
     
-     public var textColor: UIColor = UIColor.clearColor()
-     public var iconColor: UIColor = UIColor.clearColor() // if alpha color is 0 color ignoring
+     open var textColor: UIColor = UIColor.clear
+     open var iconColor: UIColor = UIColor.clear // if alpha color is 0 color ignoring
     
-    public var DefaultBackgroundColor:UIColor = UIColor.clearColor()
-    public var selectBackgroundColor:UIColor = UIColor.clearColor()
+    open var DefaultBackgroundColor:UIColor = UIColor.clear
+    open var selectBackgroundColor:UIColor = UIColor.clear
 
-    public func playAnimation(){
+    open func playAnimation(){
         assert(animation != nil,"必须在UitabBarItem中添加一个animation")
         guard animation != nil && iconView != nil else {
            return
@@ -35,7 +35,7 @@ public class TLTabBarSpringItem: UITabBarItem {
     }
     
     
-    public func deSelectAnimation() -> Void {
+    open func deSelectAnimation() -> Void {
         guard animation != nil && iconView != nil else{
          return
         }
@@ -47,7 +47,7 @@ public class TLTabBarSpringItem: UITabBarItem {
         
     }
     
-    public func selectedState() -> Void {
+    open func selectedState() -> Void {
         guard animation != nil && iconView != nil else{
             return
         }
